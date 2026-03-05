@@ -6,6 +6,7 @@ import unibo.basicomm23.utils.CommUtils;
 public class MainConwayLifeJava  {
 
 	public void configureTheSystemWitMockOutdev() {
+		//
     }
 
 	public void configureTheSystemWithSwing() {
@@ -17,13 +18,14 @@ public class MainConwayLifeJava  {
    	}
 	
 	public void configureTheSystemWithHtmlWs(boolean pageexternal) {
+		//
  	}
  	
     public static void main(String[] args) {
-    System.out.println("MainConway | STARTS " );  
-    MainConwayLifeJava app = new MainConwayLifeJava();
-    app.configureTheSystemWithSwing();
-    System.out.println("MainConway | ENDS " );  
+    	System.out.println("MainConway | STARTS " );  
+    	MainConwayLifeJava app = new MainConwayLifeJava();
+    	app.configureTheSystemWithSwing();
+    	System.out.println("MainConway | ENDS " );  
     }
 
 }
