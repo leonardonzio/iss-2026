@@ -21,9 +21,3 @@ Laboratorio di <b>Ingegneria dei Sistemi Software</b> a.a. 2025/2026 di _Barone 
 ### Sistema ConwayLife con pagine HTML
 
 - [ConwayLife Sprint3(ConwayLife/Sprint3/conway26Java): evoluzione del sistema in locale usando una pagina HTML come dispositivo di I/O. <i>Distribuzione</i>: Docker yaml.
-
-### Indici
-
-<p><a href="https://leonardonzio.github.io/iss-2026/docs/sprint1.html">sprint1</a></p>
-<p><a href="https://leonardonzio.github.io/iss-2026/docs/sprint2.html">sprint2</a></p>
-
