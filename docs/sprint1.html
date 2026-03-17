@@ -3,15 +3,10 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-<!--
-    <script type="text/javascript" src="../css/issStyle.js"></script>
--->
     
 </head>
 <title>Sprint1: conway26Java_v0</title>
  
-    
-
 <body>
 <div id="top">
 <h1>ConwayLife Sprint1</h1>
@@ -69,6 +64,7 @@ R2  L’utente umano deve poter:
                 <li><strong>void setStatus(int row, int col, boolean status)</strong> : Aggiorna lo stato della cella nella posizione <code>(row, col)</code> della griglia.</li>
                 <li><strong>boolean isAlive(int row, int col)</strong> : Restituisce <code>true</code> se la cella nella posizione <code>(row, col)</code> è viva.</li>
                 <li><strong>int countNeighborsLive(int row, int col)</strong> : Restituisce il numero di celle vicine vive rispetto alla posizione <code>(row, col)</code>.</li>
+                <li><strong>void reset()</strong> : Imposta tutte le celle allo stato iniziale</li>
             </ul>
         </li>
     </ul>
@@ -79,11 +75,12 @@ R2  L’utente umano deve poter:
     <ul>
         <li><strong>ILife</strong>: Entità che si occupa di gestire l'evoluzione del gioco. L'evoluzione descritta da Conway.
             <ul>
-                <li><strong>int getRows()</strong> - Restituisce il numero di righe della griglia.</li>
-                <li><strong>int getCols()</strong> - Restituisce il numero di colonne della griglia.</li>
-                <li><strong>void setCell(int row, int col, boolean alive)</strong> - Imposta lo stato di una cella.</li>
-                <li><strong>void nextGeneration()</strong> - Calcola e applica la generazione successiva.</li>
-                <li><strong>boolean isAlive(int row, int col)</strong> - Restituisce <code>true</code> se la cella nella posizione <code>(row, col)</code> è viva.</li>
+                <li><strong>void nextGeneration()</strong> - Aggiorna la griglia calcolando la generazione successiva.</li>
+                <li><strong>boolean isAlive(int row, int col)</strong> - Restituisce lo stato della cella agli indici di riga e colonna specificati.</li>
+                <li><strong>void setCell(int row, int col, boolean alive)</strong> - Imposta lo stato della cella agli indici di riga e colonna specificati in base al valore passato.</li>
+                <li><strong>ICell getCell(int row, int col)</strong> - Restituisce la cella corrispondente agli indici di riga e colonna specificati.</li>
+                <li><strong>IGrid getGrid()</strong> - Restituisce la griglia gestita dal modello.</li>
+                <li><strong>void resetGrid()</strong> - Reimposta la griglia riportando tutte le celle allo stato iniziale.</li>
             </ul>
         </li>
     </ul>

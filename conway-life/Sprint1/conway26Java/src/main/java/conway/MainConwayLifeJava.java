@@ -16,15 +16,14 @@ public class MainConwayLifeJava  {
 
         // 3. Inizializziamo il Controller (Il "Come")
         // Iniettiamo il modello e l'output nel controller (Dependency Injection)
-        GameController lifeController = new LifeController(gameModel, outputDevice);
+         GameController lifeController = new LifeController(gameModel, outputDevice);
 
         // 4. Inizializziamo l'Input (L' "Innesco")
         // L'input comunica con il controller
-        // InputDev inputDevice = new InputDev(lifeController);
-        lifeController.switchCellState(2, 1);
-        lifeController.switchCellState(2, 2);
-        lifeController.switchCellState(2, 3);
-        
+//        InputDev inputDevice = new InputDev(lifeController);
+         lifeController.switchCellState(2, 1);
+         lifeController.switchCellState(2, 2);
+         lifeController.switchCellState(2, 3);
         // 5. Avvio del sistema (simula l'esistenza di un input dev)
         System.out.println("MainConwayLifeJava: Inizializzazione completata.");  
         lifeController.onStart();
@@ -42,10 +41,10 @@ public class MainConwayLifeJava  {
  	}
  	
     public static void main(String[] args) {
-    	System.out.println("MainConway | STARTS " );  
-    	MainConwayLifeJava app = new MainConwayLifeJava();
-    	app.configureTheSystemWitMockOutdev();
-    	System.out.println("MainConway | ENDS " );  
+    System.out.println("MainConway | STARTS " );  
+    MainConwayLifeJava app = new MainConwayLifeJava();
+    app.configureTheSystemWitMockOutdev();
+    System.out.println("MainConway | ENDS " );  
     }
 
 }

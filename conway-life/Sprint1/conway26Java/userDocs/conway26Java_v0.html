@@ -3,15 +3,10 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-<!--
-    <script type="text/javascript" src="../css/issStyle.js"></script>
--->
     
 </head>
 <title>Sprint1: conway26Java_v0</title>
  
-    
-
 <body>
 <div id="top">
 <h1>ConwayLife Sprint1</h1>
@@ -44,10 +39,58 @@ R2  L’utente umano deve poter:
   
 
 <h2>Requirement analysis</h2>
- 
+
+<section>
+    <h3>Cosa si intende per Cella?</h3>
+    <ul>
+        <li><strong>ICell</strong>: Entità capace di trovarsi in 2 stati: viva o morta.
+            <ul>
+                <li><strong>void setStatus(boolean alive)</strong>: Imposta lo stato della cella.</li>
+                <li><strong>void switchCellState()</strong>: Imposta lo stato della cella alternandolo da viva a morta (o viceversa).</li>
+                <li><strong>boolean isAlive()</strong>: Restituisce <code>true</code> se la cella è viva, altrimenti <code>false</code>.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h3>Cosa si intende per Griglia?</h3>
+    <ul>
+        <li><strong>IGrid</strong>: Rappresenta una struttura bidimensionale ordinata di celle che permette di gestirne il contenuto.
+            <ul>
+                <li><strong>int getRows()</strong> : Restituisce il numero di righe della griglia.</li>
+                <li><strong>int getCols()</strong> : Restituisce il numero di colonne della griglia.</li>
+                <li><strong>ICell getCell(int row, int col)</strong> : Restituisce la cella nella posizione <code>(row, col)</code> della grigilia.</li>
+                <li><strong>void setStatus(int row, int col, boolean status)</strong> : Aggiorna lo stato della cella nella posizione <code>(row, col)</code> della griglia.</li>
+                <li><strong>boolean isAlive(int row, int col)</strong> : Restituisce <code>true</code> se la cella nella posizione <code>(row, col)</code> è viva.</li>
+                <li><strong>int countNeighborsLive(int row, int col)</strong> : Restituisce il numero di celle vicine vive rispetto alla posizione <code>(row, col)</code>.</li>
+                <li><strong>void reset()</strong> : Imposta tutte le celle allo stato iniziale</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h3>Cosa si intende per Life?</h3>
+    <ul>
+        <li><strong>ILife</strong>: Entità che si occupa di gestire l'evoluzione del gioco. L'evoluzione descritta da Conway.
+            <ul>
+                <li><strong>void nextGeneration()</strong> - Aggiorna la griglia calcolando la generazione successiva.</li>
+                <li><strong>boolean isAlive(int row, int col)</strong> - Restituisce lo stato della cella agli indici di riga e colonna specificati.</li>
+                <li><strong>void setCell(int row, int col, boolean alive)</strong> - Imposta lo stato della cella agli indici di riga e colonna specificati in base al valore passato.</li>
+                <li><strong>ICell getCell(int row, int col)</strong> - Restituisce la cella corrispondente agli indici di riga e colonna specificati.</li>
+                <li><strong>IGrid getGrid()</strong> - Restituisce la griglia gestita dal modello.</li>
+                <li><strong>void resetGrid()</strong> - Reimposta la griglia riportando tutte le celle allo stato iniziale.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
 
 <h2>Problem analysis</h2>
- 
+
+<img src="./img/problem-analysis.jpeg" alt="Problem analysis">
 
 <h2>Test plans</h2> 
 
@@ -78,10 +121,10 @@ R2  L’utente umano deve poter:
 </div>  
 
 <div style="background-color:rgba(86, 56, 253, 0.9); width:60%;text-align:left;color:white">
-By studentName email: student@studio.unibo.it, 
+By Leonardo Barone email: leonardo.barone3@studio.unibo.it, 
 <!-- <img src="./img/mbot-S.jpg" alt="mbot" width="15%" height="15%"> -->
-<img src="./img/emiglio.png" alt="emiglio" width="15%" height="15%">
-GIT repo: https://github.com/... 
+<img src="../../../../docs/img/profilo.jpeg" alt="emiglio" width="15%" height="15%">
+GIT repo: https://github.com/leonardonzio/iss-2026
 </div> 
 </body>
 </html>
